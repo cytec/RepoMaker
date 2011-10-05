@@ -1,3 +1,28 @@
-This is the new git Repo for RepoMaker, hopefully i find some time to finish it soon
+Here we go!
 
-cytec
+RepoMaker 2.0... or at least 1.9.3 
+
+Some of the new improvements are: 
+Update notifications... so if you getting an update note, please use 
+
+repo -dev 
+
+to update to the latest version ;)
+
+
+HOWTO:
+
+Download all Files.
+open terminal
+
+"sudo cp repo /usr/bin/repo"
+
+"mkdir /RepoMaker"
+
+"cp sample_repo.conf /RepoMaker/sample_repo.conf"
+
+Open the conf file in your Fav text editor and Change the Settings as u like.
+
+Rename it to repo.conf
+
+and your ready to go :)
