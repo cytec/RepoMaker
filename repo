@@ -1234,16 +1234,16 @@ if [ "$1" == "-dev" ] || [ "$1" == "--dev-update" ]; then
 		echo "please run as root."
  	else
 		echo "looking for servers"
-		dropbox=$(curl -s http://dl.dropbox.com/u/1299881/repo-dev | awk 'NR==2')
+		git=$(curl -s https://raw.github.com/cytec/RepoMaker/master/repo | awk 'NR==2')
 		if [ "$dropbox" == "# RepoMaker" ]; then
-			echo "Dropbox online..."
+			echo "Git online..."
 			UPDATEPATH="http://dl.dropbox.com/u/1299881/repo-dev"
 		else
 			echo "Dropbox offline checking for cytec.us"
-			cytec=$(curl -s http://cytec.us/tools/repo | awk 'NR==2')
+			dropbox=$(curl -s http://dl.dropbox.com/u/1299881/repo-dev | awk 'NR==2')
 			if [ "$cytec" == "# RepoMaker" ]; then
-				echo "cytec.us online..."
-				UPDATEPATH="http://cytec.us/tools/repo"
+				echo "dropbox online..."
+				UPDATEPATH="http://dl.dropbox.com/u/1299881/repo-dev"
 			else
 				NOUPDATE="YES"
 			fi
